@@ -82,19 +82,22 @@ Screenshots:
 
 ---
 
-## Repository Structure
+##  Repository Structure
+
+```text
 enterprise-sales-analytics-sql-sap-sac/
 ├── sql/
-│ ├── schema.sql
-│ ├── seed_data.sql
-│ └── kpi_views.sql
+│   ├── schema.sql
+│   ├── seed_data.sql
+│   └── kpi_views.sql
 ├── sac/
-│ └── dashboards/
+│   └── dashboards/
 ├── screenshots/
 ├── docs/
-│ └── architecture.md
+│   └── architecture.md
 └── README.md
 
+```
 ---
 
 ## Future Enhancements
