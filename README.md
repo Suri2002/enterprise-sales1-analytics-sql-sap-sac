@@ -68,7 +68,7 @@ Screenshots:
 ## How to run (rebuild from scratch)
 1. Create a new database (recommended): `EnterpriseSalesOps_Rebuild`
 2. Run schema: ['SQL/Schema.sql'](SQL/Schema.sql)
-3. Seed data: ['SQL/Seed Data.sql'](SQL/SeedData.sql)
+3. Seed data: ['SQL/SeedData.sql'](SQL/SeedData.sql)
 4. Create KPI views: [`SQL/KPI.sql'](SQL/KPI.sql)
 5. Export KPI view results to CSV and import into SAC.
 
