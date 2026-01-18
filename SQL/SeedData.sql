@@ -1,10 +1,10 @@
-USE EnterpriseSalesOps2;
+USE EnterpriseSalesOps2; 
 GO
 SET NOCOUNT ON;
 GO
 
 /* =========================================================
-   1) DimDate — January 2025 (31 days)
+   1) DimDate ï¿½ January 2025 (31 days)
 ========================================================= */
 DECLARE @d DATE = '2025-01-01';
 WHILE @d <= '2025-01-31'
@@ -115,7 +115,7 @@ INSERT INTO ops.Promotions VALUES ('Spring Sale',20250105,20250120,10);
 GO
 
 /* =========================================================
-   7) FactSales — 500 rows (FAST, SET-BASED)
+   7) FactSales ï¿½ 500 rows (FAST, SET-BASED)
 ========================================================= */
 DELETE FROM ops.FactSales;
 GO
@@ -153,7 +153,7 @@ JOIN P p ON p.rn = ((n.n-1)%5)+1;
 GO
 
 /* =========================================================
-   8) Inventory Snapshot — 20 rows
+   8) Inventory Snapshot ï¿½ 20 rows
 ========================================================= */
 DELETE FROM ops.FactInventoryDaily;
 
