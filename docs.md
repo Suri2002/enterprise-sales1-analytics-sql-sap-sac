@@ -7,7 +7,7 @@ The architecture follows a layered BI approach:
 - Data Storage
 - Semantic / KPI Layer
 - Analytics & Visualization
-
+  
 ---
 
 ## 2. Data Source Layer (SQL Server)
