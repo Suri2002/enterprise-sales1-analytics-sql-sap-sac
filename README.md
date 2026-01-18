@@ -15,7 +15,7 @@ End-to-end analytics project showcasing **enterprise data modeling (star schema)
 ## Architecture
 **SQL Server (SSMS) → KPI Views → Export (CSV) → SAP Analytics Cloud (Import Models) → Dashboards**
 
-More detail: [`docs/architecture.md`](docs/architecture.md)
+More detail: ['docs.md'](docs.md)
 
 ---
 
@@ -46,20 +46,30 @@ Included KPIs:
 - Profit by Product
 - Daily Revenue Trend
 
-KPI definitions: [`sql/kpi_views.sql`](sql/kpi_views.sql)
+KPI definitions: [`SQL/KPI.sql'](SQL/KPI.sql)
 
 ---
 
 ## SAP Analytics Cloud Dashboards
-Dashboards were built in **SAC** using imported KPI datasets. ['sac/dashboards'](sac/dashboards)
+Dashboards were built in **SAC** using imported KPI datasets.
+
+Recommended pages:
+- **Executive Overview** (Revenue, Profit, Margin)
+- **Revenue by Store**
+- **Daily Revenue Trend**
+- (Optional) **Inventory Health** (On-hand vs Reorder)
+
+Screenshots:
+- <img width="968" height="533" alt="image" src="https://github.com/user-attachments/assets/a7ad8050-d5ae-4d48-99bf-0e3dceaca1e8" />
+
 
 ---
 
 ## How to run (rebuild from scratch)
 1. Create a new database (recommended): `EnterpriseSalesOps_Rebuild`
-2. Run schema: [`sql/schema.sql`](sql/schema.sql)
-3. Seed data: [`sql/seed_data.sql`](sql/seed_data.sql)
-4. Create KPI views: [`sql/kpi_views.sql`](sql/kpi_views.sql)
+2. Run schema: ['SQL/Schema.sql'](SQL/Schema.sql)
+3. Seed data: ['SQL/SeedData.sql'](SQL/SeedData.sql)
+4. Create KPI views: [`SQL/KPI.sql'](SQL/KPI.sql)
 5. Export KPI view results to CSV and import into SAC.
 
 ---
@@ -70,6 +80,24 @@ Dashboards were built in **SAC** using imported KPI datasets. ['sac/dashboards']
 - SAP Analytics Cloud (SAC)
 - GitHub
 
+---
+
+##  Repository Structure
+
+```text
+enterprise-sales-analytics-sql-sap-sac/
+├── sql/
+│   ├── schema.sql
+│   ├── seed_data.sql
+│   └── kpi_views.sql
+├── sac/
+│   └── dashboards/
+├── screenshots/
+├── docs/
+│   └── architecture.md
+└── README.md
+
+```
 ---
 
 ## Future Enhancements
