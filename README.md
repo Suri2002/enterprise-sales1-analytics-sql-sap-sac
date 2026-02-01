@@ -54,7 +54,7 @@ KPI definitions: [`SQL/KPI.sql'](SQL/KPI.sql)['SQL/YoY MoM KPIs.sql'](SQL/YoYMoM
 
 ## SAP Analytics Cloud Dashboards
 Dashboards were built in **SAC** using imported KPI datasets.
-
+['SAC/Enterprises_Sales_Analytics(1).pdf'](SAC/Enterprises_Sales_Analytics(1).pdf)
 Recommended pages:
 - **Executive Overview** (Revenue, Profit, Margin)
 - **Revenue by Store**
@@ -62,8 +62,8 @@ Recommended pages:
 - **Growth Analysis (MoM / YoY)**
 - (Optional) **Inventory Health** (On-hand vs Reorder)
 
-Dashboard:
-- ['SAC/Enterprises_Sales_Analytics(1).pdf'](SAC/Enterprises_Sales_Analytics(1).pdf)
+Screenshots:
+- ['screenshots'](screenshots)
 
 
 ---
@@ -88,13 +88,13 @@ Dashboard:
 ##  Repository Structure
 
 ```text
-enterprise-sales-analytics-sql-sap-sac/
 ├── sql/
 │   ├── schema.sql
 │   ├── seed_data.sql
 │   └── kpi_views.sql
 ├── sac/
-├── dashboard/
+│   └── dashboards/
+├── screenshots/
 ├── docs/
 │   └── architecture.md
 └── README.md
