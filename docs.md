@@ -50,12 +50,24 @@ Examples of KPIs include:
 - Revenue by Store
 - Profit by Product
 - Daily Revenue Trend
+- Month-over-Month (MoM) Revenue Growth
+- Year-over_Year(YoY) Revenue Growth
 
 Defining KPIs at the database layer avoids logic duplication across reporting tools and ensures consistency.
+Time-intelligence KPIs (MoM and YoY) are implemented using SQL window functions to compare current performance against prior periods. These KPIs are exposed as views to ensure consistent calculations across all downstream analytics tools.
 
 ---
 
-## 5. Analytics & Visualization Layer (SAP Analytics Cloud)
+## 5. Data Quality & Validation
+To ensure accuracy and reliability of analytics:
+- Foreign key constraints enforce valid relationships between fact and dimension tables
+- Numeric checks prevent invalid values (negative quantities, prices, or costs)
+- KPI outputs were validated using manual aggregation queries to confirm correctness
+- Edge cases (e.g., first month in MoM analysis) are handled gracefully using NULL logic
+
+---
+
+## 6. Analytics & Visualization Layer (SAP Analytics Cloud)
 KPI views are exported from SQL Server and imported into SAP Analytics Cloud as models.
 
 SAP Analytics Cloud is used to:
@@ -72,17 +84,25 @@ This separation of concerns aligns with enterprise BI best practices.
 
 ---
 
-## 6. Design Principles Followed
+## 7. Performance & Scalability Considerations
+- Star schema design minimizes join complexity for analytical queries
+- Non-clustered indexes are applied on frequently filtered columns (Date, Store, Product)
+- KPI calculations are pre-aggregated in SQL views to reduce dashboard computation time
+- The architecture can scale to larger datasets by increasing data volume without changing the semantic layer
+
+---
+
+## 8. Design Principles Followed
 - Star schema modeling
 - Centralized KPI definitions
 - Separation of data and visualization layers
 - Reproducible and documented architecture
+- Business-first KPI definitions aligned with executive reporting
 
 ---
 
-## 7. Future Enhancements
+## 9. Future Enhancements
 Potential future improvements include:
 - Automated data refresh pipelines
 - Live SQL Server connection to SAC
-- Advanced time intelligence KPIs (MoM, YoY)
 - Inventory optimization analytics

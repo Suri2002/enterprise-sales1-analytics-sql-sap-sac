@@ -45,22 +45,25 @@ Included KPIs:
 - Revenue by Store
 - Profit by Product
 - Daily Revenue Trend
+- Month-over-Month (MoM) Growth
+- Year-over-Year (YoY) Growth
 
-KPI definitions: [`SQL/KPI.sql'](SQL/KPI.sql)
+KPI definitions: [`SQL/KPI.sql'](SQL/KPI.sql)['SQL/YoY MoM KPIs.sql'](SQL/YoYMoMKPIs.sql)
 
 ---
 
 ## SAP Analytics Cloud Dashboards
 Dashboards were built in **SAC** using imported KPI datasets.
-
+['SAC/Enterprises_Sales_Analytics(1).pdf'](SAC/Enterprises_Sales_Analytics(1).pdf)
 Recommended pages:
 - **Executive Overview** (Revenue, Profit, Margin)
 - **Revenue by Store**
 - **Daily Revenue Trend**
+- **Growth Analysis (MoM / YoY)**
 - (Optional) **Inventory Health** (On-hand vs Reorder)
 
 Screenshots:
-- <img width="968" height="533" alt="image" src="https://github.com/user-attachments/assets/a7ad8050-d5ae-4d48-99bf-0e3dceaca1e8" />
+- ['screenshots'](screenshots)
 
 
 ---
@@ -69,7 +72,7 @@ Screenshots:
 1. Create a new database (recommended): `EnterpriseSalesOps_Rebuild`
 2. Run schema: ['SQL/Schema.sql'](SQL/Schema.sql)
 3. Seed data: ['SQL/SeedData.sql'](SQL/SeedData.sql)
-4. Create KPI views: [`SQL/KPI.sql'](SQL/KPI.sql)
+4. Create KPI views: [`SQL/KPI.sql'](SQL/KPI.sql)['SQL/YoY MoM KPIs.sql'](SQL/YoYMoMKPIs.sql)
 5. Export KPI view results to CSV and import into SAC.
 
 ---
@@ -85,7 +88,6 @@ Screenshots:
 ##  Repository Structure
 
 ```text
-enterprise-sales-analytics-sql-sap-sac/
 ├── sql/
 │   ├── schema.sql
 │   ├── seed_data.sql
@@ -101,7 +103,6 @@ enterprise-sales-analytics-sql-sap-sac/
 ---
 
 ## Future Enhancements
-- MoM / YoY KPIs
 - Automated refresh pipeline
 - Live connectivity to SAC (Cloud Connector) where available
 - Inventory optimization analytics (stockout risk, reorder suggestions)
